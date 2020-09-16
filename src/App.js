@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Federico from './Components/Federico/Federico'
+
+
 function App() {
   return (
     <div className="App">
@@ -10,14 +13,18 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>asdasd 1 2 3</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React !!!
         </a>
+
+        <Federico />
+
       </header>
     </div>
   );
