@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Federico from './Components/Federico/Federico'
+import Sanket from './Components/Sanket/Sanket'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>asdasd 1 2 3</p>
+        <p>Sanket Patidar</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -23,7 +23,7 @@ function App() {
           Learn React !!!
         </a>
 
-        <Federico />
+        <Sanket />
 
       </header>
     </div>
