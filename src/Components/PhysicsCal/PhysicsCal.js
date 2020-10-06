@@ -2,6 +2,7 @@
 import React from 'react';
 import './PhysicsCal.css'
 
+
 class PhysicsCal extends React.Component {
     constructor() {
         super();
@@ -33,9 +34,6 @@ class PhysicsCal extends React.Component {
             force: force,
             arrlist: arrlist
         });
-
-
-
         event.preventDefault()
     }
 
@@ -66,28 +64,35 @@ class PhysicsCal extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class="settings">
                 <h1>Physics Calculator to calculate FORCE</h1>
                 <form onSubmit={this.exe} onReset={this.handleFormReset}>
+
                     <div>
-                        <label>Enter Mass</label>
-                        <input type="number" min="0" value={this.state.mass} onChange={(e) => this.handlemass(e)} />
+                        <label id="label">Enter Mass  </label>
+                        <input type="number" min="0" id="textfield" value={this.state.mass} onChange={(e) => this.handlemass(e)} />
                     </div>
+
                     <div>
-                        <label id="acclabel">Enter Acceleration</label>
-                        <input type="number" min="0" id="acc" value={this.state.acc} onChange={(e) => this.handleacc(e)} />
+                        <label id="label">Enter Acceleration</label>
+                        <input type="number" min="0" id="textfield" value={this.state.acc} onChange={(e) => this.handleacc(e)} />
                     </div>
-                    <div>
-                        <button type='submit' id="submitBtn">Calculate Force</button>
-                    </div>
-                    <label>Force = </label>
-                    {this.state.force}
+
                     <br></br>
-                    <button type="button" onClick={this.onResetClick.bind(this)}>Clear</button>
 
+                    <button type='submit' id="submit">Calculate Force</button><br></br><br></br>
+
+                    <label id="label">Force = </label>
+                    {this.state.force}
+
+                    <br></br><br></br>
+
+                    <button type="button" id="clear" onClick={this.onResetClick.bind(this)}>Clear</button>
+                    <br></br><br></br>
+
+                    <label id="label">Calculation History  </label>
+                    {this.displaylist()}
                 </form>
-                {this.displaylist()}
-
             </div>);
 
     }
