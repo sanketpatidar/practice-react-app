@@ -15,27 +15,51 @@ class PhysicsCal extends React.Component {
 
     }
 
-    handlemass = (event) => {
+    handlemass(event) {
         this.setState({
             mass: event.target.value
         })
     }
-    handleacc = (event) => {
+    handleacc(event) {
         this.setState({
             acc: event.target.value
         })
     }
     exe = (event) => {
+        const force = parseFloat(this.state.mass) * parseFloat(this.state.acc)
+        let arrlist = this.state.arrlist
+        arrlist.push(force)
         this.setState({
-            force: parseFloat(this.state.mass) * parseFloat(this.state.acc)
+            force: force,
+            arrlist: arrlist
         });
+
+
+
         event.preventDefault()
-        event.target.reset();
     }
 
     onResetClick(e) {
         e.preventDefault();
         this.setState(this.initialState);
+    }
+
+    displaylist() {
+
+        const arrlist = this.state.arrlist
+        let printList
+
+        printList = arrlist.map((force, count) => {
+            return (
+                <li>{force}</li>
+            )
+        })
+
+        return (
+            <ul>
+                {printList}
+            </ul>
+        )
     }
 
 
@@ -47,28 +71,23 @@ class PhysicsCal extends React.Component {
                 <form onSubmit={this.exe} onReset={this.handleFormReset}>
                     <div>
                         <label>Enter Mass</label>
-                        <input type="number" min="0" value={this.state.mass} onChange={this.handlemass} />
+                        <input type="number" min="0" value={this.state.mass} onChange={(e) => this.handlemass(e)} />
                     </div>
                     <div>
-                        <label>Enter Acceleration</label>
-                        <input type="number" min="0" value={this.state.acc} onChange={this.handleacc} />
+                        <label id="acclabel">Enter Acceleration</label>
+                        <input type="number" min="0" id="acc" value={this.state.acc} onChange={(e) => this.handleacc(e)} />
                     </div>
                     <div>
-                        <button type='submit'>Calculate Force</button>
+                        <button type='submit' id="submitBtn">Calculate Force</button>
                     </div>
                     <label>Force = </label>
                     {this.state.force}
                     <br></br>
-                    <button type="button" onClick={this.onResetClick.bind(this)}>Reset</button>
-                    arrlist.push({this.state.force})
-                    <div>
-                        <ul>
-                            {this.state.arrlist.map(item => (
-                                <li key={item}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                    <button type="button" onClick={this.onResetClick.bind(this)}>Clear</button>
+
                 </form>
+                {this.displaylist()}
+
             </div>);
 
     }
