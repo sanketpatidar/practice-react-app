@@ -1,6 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
+import logo from './force.jpg';
 import './App.css';
+import './Components/PhysicsCal/PhysicsCal.css';
 
 // import Sanket from './Components/Sanket/Sanket'
 // import NewComponent from './Components/NewComponent/NewComponent'
@@ -12,6 +14,7 @@ function App() {
   return (
 
     <div className="App">
+      <img src={logo} className="App-logo" />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
