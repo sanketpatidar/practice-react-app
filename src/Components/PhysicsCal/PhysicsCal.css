@@ -1,0 +1,13 @@
+.acc{
+   text-align: center;
+   justify-content: center;
+}
+
+.submitBtn {
+    transition-duration: 0.4s;
+  }
+  
+  .submitBtn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
