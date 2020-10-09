@@ -70,20 +70,19 @@ class PhysicsCal extends React.Component {
 
                     <div>
                         <label id="label">Enter Mass  </label>
-                        <input type="number" min="0" id="textfield" value={this.state.mass} onChange={(e) => this.handlemass(e)} />
+                        <input type="number" step='any' min="0" id="textfield" value={this.state.mass} onChange={(e) => this.handlemass(e)} />
                     </div>
 
                     <div>
                         <label id="label">Enter Acceleration</label>
-                        <input type="number" min="0" id="textfield" value={this.state.acc} onChange={(e) => this.handleacc(e)} />
+                        <input type="number" step='any' min="0" id="textfield" value={this.state.acc} onChange={(e) => this.handleacc(e)} />
                     </div>
 
                     <br></br>
 
                     <button type='submit' id="submit">Calculate Force</button><br></br><br></br>
 
-                    <label id="label">Force = </label>
-                    {this.state.force}
+                    <label id="label">Force = {this.state.force} </label>
 
                     <br></br><br></br>
 
@@ -100,22 +99,3 @@ class PhysicsCal extends React.Component {
 
 export default PhysicsCal;
 
-// function Sanket() {
-
-//     const addNumber = function () {
-
-//     }
-
-//     const name = "Sanket";
-//     let nickname = "Sanket1";
-
-//     nickname = "Sanket2";
-
-//     return (
-//         <p className={"paragraph"}>
-//             Hello {nickname}
-//         </p>
-//     );
-// }
-
-// export default Sanket;
