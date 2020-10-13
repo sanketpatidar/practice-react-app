@@ -16,17 +16,17 @@ class PhysicsCal extends React.Component {
 
     }
 
-    handlemass(event) {
+    handlemass(e) {
         this.setState({
-            mass: event.target.value
+            mass: e.target.value
         })
     }
-    handleacc(event) {
+    handleacc(e) {
         this.setState({
-            acc: event.target.value
+            acc: e.target.value
         })
     }
-    exe = (event) => {
+    exe = (e) => {
         const force = parseFloat(this.state.mass) * parseFloat(this.state.acc)
         let arrlist = this.state.arrlist
         arrlist.push(force)
@@ -34,7 +34,7 @@ class PhysicsCal extends React.Component {
             force: force,
             arrlist: arrlist
         });
-        event.preventDefault()
+        e.preventDefault()
     }
 
     onResetClick(e) {
@@ -43,16 +43,13 @@ class PhysicsCal extends React.Component {
     }
 
     displaylist() {
-
         const arrlist = this.state.arrlist
         let printList
-
         printList = arrlist.map((force, count) => {
             return (
                 <li>{force}</li>
             )
         })
-
         return (
             <ul>
                 {printList}
