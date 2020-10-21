@@ -1,12 +1,13 @@
 import React from 'react';
 // import logo from './logo.svg';
-import logo from './force.jpg';
+// import logo from './force.jpg';
 import './App.css';
 import './Components/PhysicsCal/PhysicsCal.css';
 
 // import Sanket from './Components/Sanket/Sanket'
 // import NewComponent from './Components/NewComponent/NewComponent'
-import PhysicsCal from './Components/PhysicsCal/PhysicsCal'
+// import PhysicsCal from './Components/PhysicsCal/PhysicsCal'
+import Fxcomponent from './Components/Fxcomponent/Fxcomponent'
 
 
 
@@ -14,7 +15,7 @@ function App() {
   return (
 
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -33,8 +34,8 @@ function App() {
 
       {/* <NewComponent /> */}
 
-      <PhysicsCal />
-
+      {/* <PhysicsCal /> */}
+      <Fxcomponent />
       {/* </header> */}
     </div>
   );
