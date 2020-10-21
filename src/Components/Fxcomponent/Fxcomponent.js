@@ -37,48 +37,6 @@ function FxComponent() {
         </div>
     )
 
-
-
-
-
-    // const fetchusers = async (user) => {
-    //     const api_call = await fetch(`https://api.github.com/users/${user}`);
-    // }
-
-
-    // const [githubData, setGithubData] = React.useState("");
-    // console.log(githubData)
-
-    // React.useEffect(() => {
-    //     if (!githubData) {
-    //         return
-    //     }
-    //     console.log(githubData)
-    // }, [githubData]);
-
-    // fetch("https://api.github.com/users/" + githubData)
-    //     .then((response) => {
-    //         return response.json()
-    //     })
-    //     .then((data) => {
-    //         console.log(data);
-    //     }, [githubData]);
-
-
-    // return (
-    //     <div>
-    //         <form onSubmit={(e) => {
-    //             e.preventDefault()
-    //             setGithubData(e.target.elements.user.value)
-    //         }}>
-    //             <h1>Function Component</h1>
-    //             <input type='text' name='user'></input>
-    //             <button type='onSubmit'>Submit</button>
-    //         </form>
-
-    //     </div>
-    // );
-
 }
 
 export default FxComponent;
